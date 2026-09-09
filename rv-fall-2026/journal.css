@@ -1,0 +1,524 @@
+/* A travel journal: route navigation, destination postcards, calendar pages. */
+body {
+  background-color: #eee9df;
+  background-image:
+    radial-gradient(#927d5b17 0.65px, transparent 0.85px),
+    linear-gradient(135deg, #f4f0e5aa, #e4e9df88);
+  background-size:
+    5px 5px,
+    100% 100%;
+}
+body > header {
+  padding-top: 38px;
+  padding-bottom: 30px;
+}
+body > header > .muted {
+  color: #83593f;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 0.69rem;
+  font-weight: 800;
+}
+h1 {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 1;
+}
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+}
+.chip {
+  background: #fffdf69c;
+  border-color: #d5cfbf;
+  font-size: 0.8rem;
+}
+body > nav {
+  background: #f4f0e7f2;
+  border-color: #d5cfbf;
+}
+body > main {
+  padding-top: 28px;
+  padding-bottom: 60px;
+}
+.panel > h2,
+.pad h2 {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+.panel > h2 {
+  font-size: clamp(1.9rem, 3.7vw, 2.7rem);
+  line-height: 1.15;
+}
+.panel > h3 {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.goal,
+.route,
+.stop,
+.cost-grid article {
+  background: #fffdf7;
+  border-color: #d7d0c1;
+  box-shadow: 0 5px 18px #40341908;
+}
+.goal {
+  padding: 22px;
+  border-top: 3px solid #81937b;
+  border-radius: 3px 3px 14px 14px;
+}
+.goal > b {
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.goal p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+#overview > .route {
+  padding: 12px 22px;
+}
+#overview > .route p {
+  padding: 10px 0;
+  border-bottom: 1px dashed #d9d2c4;
+  margin: 0;
+}
+#overview > .route p:last-child {
+  border-bottom: 0;
+}
+#overview > .route b {
+  display: inline-block;
+  min-width: 120px;
+  color: #805237;
+}
+.stop {
+  align-self: start;
+  border-radius: 15px;
+}
+.stop > img {
+  display: block;
+}
+.pad {
+  padding: 22px;
+}
+.pad h2 {
+  font-size: 2rem;
+}
+.camp {
+  background: #eeeadd;
+}
+.act {
+  border-color: #ddd7c9;
+  background: #fffefa;
+  padding: 13px;
+}
+.note {
+  background: #e7ebde;
+  border-left: 3px solid #81937b;
+  border-radius: 0 10px 10px 0;
+  line-height: 1.6;
+}
+.days div {
+  background: #fffdf7;
+  border-color: #d7d0c1;
+  padding: 16px 12px;
+  border-top: 3px solid #81937b;
+}
+.box {
+  background: #fffdf7;
+}
+.top h2 {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+@media (max-width: 600px) {
+  body > header {
+    padding-top: 26px;
+  }
+  .pad {
+    padding: 18px;
+  }
+}
+#itinerary {
+  padding: 30px;
+  margin: 0 -16px;
+  border: 1px solid #dcd5c5;
+  border-radius: 6px 30px 6px 30px;
+  background-color: #eee8db;
+  background-image:
+    radial-gradient(#8d795b18 0.65px, transparent 0.85px),
+    repeating-linear-gradient(0deg, transparent 0 31px, #b7a88c10 31px 32px);
+  background-size:
+    5px 5px,
+    100% 32px;
+}
+#itinerary .itinerary-head {
+  align-items: center;
+  margin: 5px 0 26px;
+}
+#itinerary .itinerary-head h2 {
+  font-family: Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+}
+#itinerary .itinerary-head .muted {
+  max-width: 330px;
+  font-size: 0.95rem;
+}
+.journey {
+  display: grid;
+  gap: 26px;
+}
+.journal-label {
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.journey-index {
+  background: #fffdf8b8;
+  padding: 19px 22px;
+  border: 1px solid #d5cebe;
+  border-radius: 12px;
+}
+.journey-index .journal-label {
+  color: #825137;
+}
+.journey-index .journal-label > span {
+  font-weight: 500;
+  color: #647069;
+  margin-left: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.journey-index ol {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px 20px;
+}
+.journey-index a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 750;
+  color: #20322d;
+}
+.journey-index a > span {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 29px;
+  height: 29px;
+  border: 1px solid #9baca1;
+  border-radius: 50%;
+  font-size: 0.65rem;
+  background: #e2e9df;
+}
+.journey-index a:hover {
+  color: #a75f3c;
+}
+.journey-index a:focus-visible {
+  outline: 2px solid #a75f3c;
+  outline-offset: 5px;
+}
+.journey-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  font-size: 0.73rem;
+  color: #536056;
+  margin: -9px 3px -4px;
+}
+.moving {
+  --day-color: #a05c37;
+  --day-tint: #f5e9de;
+}
+.together {
+  --day-color: #426750;
+  --day-tint: #e5edde;
+}
+.independent {
+  --day-color: #566877;
+  --day-tint: #e7eced;
+}
+.journey-legend > span::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 7px 1px 0;
+  border-radius: 50%;
+  background: var(--day-color);
+}
+.journey-chapter {
+  scroll-margin-top: 90px;
+  border: 1px solid #d6cebd;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 12px 25px #4034190a;
+  background: #faf7ef;
+}
+.chapter-cover {
+  position: relative;
+  min-height: 255px;
+  background: #263f33;
+  display: flex;
+  align-items: end;
+  isolation: isolate;
+}
+.chapter-cover > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.chapter-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, #14291be8, #14291b50),
+    linear-gradient(0deg, #14291b80, transparent);
+}
+.chapter-caption {
+  position: relative;
+  width: 100%;
+  padding: 32px;
+  color: #fffdf3;
+}
+.chapter-caption .journal-label {
+  color: #eedbb9;
+}
+.chapter-caption h3 {
+  font:
+    500 clamp(2rem, 4vw, 3.2rem) / 1.05 Georgia,
+    serif;
+  letter-spacing: -0.035em;
+  margin: 10px 70px 7px 0;
+}
+.chapter-number {
+  position: absolute;
+  right: 30px;
+  top: 26px;
+  font:
+    italic 3.5rem/1 Georgia,
+    serif;
+  color: #ffffff8a;
+}
+.chapter-mood {
+  margin: 0 0 21px;
+  font-size: 0.92rem;
+  color: #f3efe2;
+}
+.chapter-caption a {
+  display: inline-block;
+  color: #fffdf3;
+  font-size: 0.77rem;
+  text-underline-offset: 4px;
+}
+.chapter-calendar {
+  padding: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+.journal-day {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  background: #fffefa;
+  border: 1px solid #ded8c9;
+  border-top: 3px solid var(--day-color);
+  border-radius: 3px 3px 10px 10px;
+}
+.journal-day-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 17px;
+}
+.journal-day time {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.journal-day time b {
+  font:
+    500 2.65rem/1 Georgia,
+    serif;
+  letter-spacing: -0.06em;
+}
+.journal-day time span {
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  line-height: 1.45;
+}
+.journal-day time small {
+  display: block;
+  color: #737a70;
+  font-size: 0.66rem;
+  font-weight: 500;
+}
+.day-symbol {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  color: var(--day-color);
+  background: var(--day-tint);
+}
+.day-category {
+  margin: 0 0 8px;
+  color: var(--day-color);
+  font-size: 0.65rem;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.journal-day h4 {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  font-weight: 650;
+}
+.journal-evening {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px dashed #d5d0c1;
+}
+.journal-evening > span {
+  font-size: 0.61rem;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  color: #8a735c;
+}
+.journal-evening p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 5px 0 0;
+  color: #596358;
+}
+.journey-home {
+  scroll-margin-top: 90px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding: 26px;
+  border: 1px dashed #a6b19c;
+  border-radius: 12px;
+  background: #e4e9da;
+}
+.journey-home > span {
+  font-size: 3rem;
+  color: #4f6852;
+}
+.journey-home h3 {
+  font:
+    500 1.6rem Georgia,
+    serif;
+  margin: 7px 0;
+}
+.journey-home p:last-child {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #536052;
+}
+@media (max-width: 950px) {
+  .chapter-calendar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  #itinerary {
+    padding: 16px 12px;
+    margin: 0 -12px;
+    border-radius: 6px 20px;
+  }
+  #itinerary .itinerary-head {
+    display: block;
+    padding: 4px;
+  }
+  #itinerary .itinerary-head .muted {
+    margin-top: 12px;
+  }
+  .journey {
+    gap: 20px;
+  }
+  .journey-index {
+    padding: 16px;
+  }
+  .journey-index ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px 8px;
+  }
+  .journey-index .journal-label > span {
+    display: block;
+    margin: 6px 0 0;
+  }
+  .journey-index a {
+    font-size: 0.73rem;
+    gap: 6px;
+  }
+  .journey-legend {
+    gap: 8px 14px;
+  }
+  .chapter-cover {
+    min-height: 240px;
+  }
+  .chapter-caption {
+    padding: 24px 20px;
+  }
+  .chapter-caption h3 {
+    margin-right: 30px;
+  }
+  .chapter-number {
+    right: 18px;
+    top: 15px;
+    font-size: 2.5rem;
+  }
+  .chapter-calendar {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 12px;
+  }
+  .journal-day {
+    padding: 18px;
+  }
+  .journal-day-top {
+    margin-bottom: 12px;
+  }
+  .journey-home {
+    padding: 20px;
+    gap: 15px;
+  }
+}
+@media print {
+  .journey-index,
+  .journey-legend {
+    display: none;
+  }
+  .journey-chapter {
+    break-inside: avoid;
+  }
+}

@@ -270,24 +270,53 @@
     }),
   );
   const itineraryList = qs("#itinerary-list");
-  const kindIcon = (kind) => {
-    if (kind.includes("Travel") || kind.includes("move")) return "↗";
-    if (kind.includes("Work")) return "☀";
-    if (kind.includes("Vacation")) return "✦";
-    return "●";
-  };
-  itineraryList.innerHTML = itin
-    .map((x, i) => {
-      const d = new Date(x.date + "T12:00:00");
-      const label = d.toLocaleDateString("en-US", {
-        weekday: "short",
-        month: "short",
-        day: "numeric",
-      });
-      const isNewStop = !i || itin[i - 1].stop !== x.stop;
-      return `${isNewStop ? `<div class="route-stop"><span>${i + 1}</span><div><b>${esc(x.stop)}</b><small>Base camp</small></div></div>` : ""}<article class="itday ${x.kind.toLowerCase().includes("travel") || x.kind.toLowerCase().includes("move") ? "travel" : ""}"><time datetime="${x.date}"><span>${d.toLocaleDateString("en-US", { month: "short" })}</span><b>${d.getDate()}</b><small>${d.toLocaleDateString("en-US", { weekday: "short" })}</small></time><div class="it-node" aria-hidden="true">${kindIcon(x.kind)}</div><div class="it-copy"><span class="itkind">${esc(x.kind)}</span><h3>${esc(x.day)}</h3><p class="it-evening"><b>Evening:</b> ${esc(x.evening)}</p></div></article>`;
-    })
-    .join("");
+  const chapters = [];
+  itin.forEach((day) => {
+    if (chapters.at(-1)?.name !== day.stop)
+      chapters.push({ name: day.stop, days: [] });
+    chapters.at(-1).days.push(day);
+  });
+  const moods = [
+    "Gorges & small-town mornings",
+    "Into the autumn woods",
+    "Big skies above the river",
+    "Mountain days, city evenings",
+    "Follow the river south",
+    "A little horse-country wandering",
+    "One more week of discoveries",
+  ];
+  const dayStyle = (kind) =>
+    /travel|move/i.test(kind)
+      ? "moving"
+      : /vacation|weekend/i.test(kind)
+        ? "together"
+        : "independent";
+  itineraryList.className = "journey";
+  itineraryList.innerHTML =
+    `<div class="journey-index"><p class="journal-label">THE LOOP <span>Michigan → Appalachia → home</span></p><ol>${chapters.map((c, i) => `<li><a href="#chapter-${i}"><span>${i === 7 ? "⌂" : String(i + 1).padStart(2, "0")}</span>${esc(c.name)}</a></li>`).join("")}</ol></div><div class="journey-legend"><span class="moving">On the road</span><span class="together">Time together</span><span class="independent">Patrick works · Sue explores</span></div>` +
+    chapters
+      .map((c, i) => {
+        const stop = stops.find((s) => s.name === c.name);
+        const dateLabel = (date) =>
+          new Date(date + "T12:00:00").toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+          });
+        if (!stop)
+          return `<section class="journey-home" id="chapter-${i}"><span aria-hidden="true">⌂</span><div><p class="journal-label">NOV 7 · HOME AGAIN</p><h3>A comfortable Saturday finish.</h3><p>${esc(c.days[0].day)}</p></div></section>`;
+        return `<section class="journey-chapter" id="chapter-${i}" aria-labelledby="chapter-title-${i}"><div class="chapter-cover"><img src="${esc(stop.image)}" alt="${esc(stop.name)}" loading="lazy"><div class="chapter-caption"><span class="chapter-number">${String(i + 1).padStart(2, "0")}</span><p class="journal-label">${esc(stop.dates)} · ${c.days.length} NIGHTS</p><h3 id="chapter-title-${i}">${esc(stop.name)}</h3><p class="chapter-mood">${moods[i]}</p><a href="${esc(stop.campground.url)}" target="_blank" rel="noopener">⌂ ${esc(stop.campground.name)} ↗</a></div></div><div class="chapter-calendar">${c.days
+          .map((day) => {
+            const date = new Date(day.date + "T12:00:00");
+            const style = dayStyle(day.kind);
+            const label =
+              style === "independent"
+                ? "Sue explores · Patrick works"
+                : day.kind;
+            return `<article class="journal-day ${style}"><div class="journal-day-top"><time datetime="${day.date}" aria-label="${dateLabel(day.date)}"><b>${date.getDate()}</b><span>${date.toLocaleDateString("en-US", { weekday: "short" })}<small>${date.toLocaleDateString("en-US", { month: "short" })}</small></span></time><span class="day-symbol" aria-hidden="true">${style === "moving" ? "↗" : style === "together" ? "✦" : "☀"}</span></div><p class="day-category">${esc(label)}</p><h4>${esc(day.day)}</h4><div class="journal-evening"><span>THE EVENING</span><p>${esc(day.evening)}</p></div></article>`;
+          })
+          .join("")}</div></section>`;
+      })
+      .join("");
   let votes = {};
   try {
     votes = JSON.parse(localStorage.getItem("rv26votes") || "{}");
