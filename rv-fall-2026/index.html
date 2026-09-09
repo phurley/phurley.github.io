@@ -1,1 +1,272 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fall Together — Patrick & Sue RV Loop 2026</title><link rel="stylesheet" href="styles.css"></head><body><header><div class="muted">Fall 2026 • Sue review edition</div><h1>Fall Together</h1><p class="hero-sub">A five-week RV trip built around memorable time together — with <b>18 genuinely fun workdays for Sue</b>, not 18 days of waiting for work to end.</p><div class="chips"><span class="chip">Oct 2 → Nov 7</span><span class="chip">36 nights</span><span class="chip">7 bases</span><span class="chip">18 Sue workdays</span><span class="chip">8 planned days off + 2 reserve</span></div></header><nav><button class="on" data-p="overview">Overview</button><button data-p="itinerary">Daily itinerary</button><button data-p="stops">Stops + activities</button><button data-p="work">Work + days off</button><button data-p="roads">RV grades</button><button data-p="review">Reviews</button></nav><main><section id="overview" class="panel on"><h2>The goal</h2><div class="goal-grid"><div class="goal"><b>Shared time matters most</b><p>Weekends, vacation days and evenings are built around hikes, e-bike rides, museums, live music, good towns and time together.</p></div><div class="goal"><b>Sue gets real days of her own</b><p>On 18 ordinary workdays, Sue gets a proposed outing with the car: walkable towns, museums, spas, cafés, tours, talks and small venues.</p></div><div class="goal"><b>Low-stress moves</b><p>Most coach moves stay under 3½ hours; the longer Appalachian legs get daylight and no work deadline.</p></div></div><h2>Recommended route</h2><div class="route"><p><b>Oct 2–6</b> Yellow Springs · ≈3 hr</p><p><b>Oct 6–11</b> Hocking Hills · ≈1¾ hr</p><p><b>Oct 11–15</b> New River Gorge · ≈3½ hr</p><p><b>Oct 15–22</b> Asheville · ≈4¼ hr</p><p><b>Oct 22–28</b> Chattanooga · ≈3½ hr</p><p><b>Oct 28–Nov 2</b> Lexington · ≈4¼ hr</p><p><b>Nov 2–7</b> Cincinnati/Lebanon · ≈1½ hr, then ≈3½ hr home</p></div><p class="note"><b>Review it interactively:</b> every activity can be rated Love / Maybe / Skip. You can also reclassify shared ideas as Sue-workday options, or promote Sue-workday ideas to shared activities. Choices persist on this device across refreshes and future visits.</p><a class="link" target="_blank" href="https://www.google.com/maps/dir/Canton,+MI/Yellow+Springs,+OH/Hocking+Hills+State+Park,+OH/Fayetteville,+WV/Asheville,+NC/Chattanooga,+TN/Lexington,+KY/Lebanon,+OH/Canton,+MI/">Full route in Google Maps ↗</a></section><section id="itinerary" class="panel"><h2>Proposed daily itinerary</h2><p class="muted">This is a starting rhythm, not a reservation schedule. Weather, energy, event calendars and your ratings should move activities around freely.</p><div id="itinerary-list" class="itinerary"></div></section><section id="stops" class="panel"><h2>Stops & activities</h2><p class="muted">Tap any activity for photos, details, maps and your review controls. Role changes are planning votes, not destructive edits — you can change them anytime.</p><div id="stop-grid" class="grid"></div></section><section id="work" class="panel"><h2>Vacation-day budget</h2><p>Eight days are tentatively allocated, leaving two reserve days now that a 5+ week trip can justify a 10-day ceiling.</p><div class="days"><div><b>1 · Oct 9</b><br>Hocking big hike</div><div><b>2 · Oct 12</b><br>New River</div><div><b>3 · Oct 16</b><br>Asheville mountain day</div><div><b>4 · Oct 19</b><br>Asheville full day</div><div><b>5 · Oct 23</b><br>Chattanooga</div><div><b>6 · Oct 26</b><br>Chattanooga</div><div><b>7 · Oct 30</b><br>Lexington</div><div><b>8 · Nov 6</b><br>Cincinnati</div><div class="reserve"><b>9 · Reserve</b><br>Weather/event</div><div class="reserve"><b>10 · Reserve</b><br>Move/favorite stop</div></div><p class="note"><b>Normal workday:</b> 7–10 work · 10–11 breakfast/handoff · 11–4 protected core · after 4 shared activity. That yields 18 ordinary workdays where Sue gets a planned solo option.</p></section><section id="roads" class="panel"><h2>RV grades & stress</h2><p><b style="color:#2e6448">Easy:</b> Canton → Yellow Springs; Lexington → Lebanon → home.</p><p><b style="color:#705415">Moderate:</b> Yellow Springs → Hocking; Hocking → Fayetteville; Asheville → Chattanooga; Chattanooga → Lexington.</p><p><b style="color:#7d3b22">Most serious:</b> Fayetteville → Asheville. Keep the coach on major routes, travel in daylight and don't make it a work-morning deadline.</p><p class="note"><b>Blue Ridge Parkway:</b> use the Escape for sightseeing. Check live NPS road closures the night before.</p><a class="link" target="_blank" href="https://www.nps.gov/blri/planyourvisit/roadclosures.htm">Blue Ridge closures ↗</a></section><section id="review" class="panel"><h2>Trip reviews</h2><div id="activity-summary" class="route">No activity ratings yet.</div><h3>Stop-level votes</h3><div id="summary" class="route">No stop votes yet. Open Stops + activities and vote on each base.</div><p><button id="clearActivities">Clear activity reviews</button> <button id="clear">Clear stop votes</button></p><p class="muted">Reviews are saved in this browser's local storage so they survive refreshes and future visits on this device.</p></section></main><div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="box"><img id="mi" alt=""><div class="body"><div class="top"><div><div id="mw" class="muted"></div><h2 id="mt"></h2></div><button class="close" id="mc" aria-label="Close">×</button></div><div id="mf" class="facts"></div><p id="md"></p><div class="reviewbox"><b>Your activity rating</b><div id="ratingControls" class="rating-controls"><button data-rating="Love">😍 Love</button><button data-rating="Maybe">🙂 Maybe</button><button data-rating="Skip">✂ Skip</button></div><div id="roleControls" class="role-controls"></div><p id="savedMsg" class="saved-msg" aria-live="polite"></p></div><div class="actions"><a id="mu" target="_blank" rel="noopener">Official / details ↗</a><a id="mm" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div></div><script>window.RV_STOPS=[];</script><script src="data-yellow.js"></script><script src="data-hocking.js"></script><script src="data-newriver.js"></script><script src="data-asheville.js"></script><script src="data-chattanooga.js"></script><script src="data-lexington.js"></script><script src="data-cincinnati.js"></script><script src="itinerary.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fall Together — Patrick & Sue RV Loop 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="muted">Fall 2026 • Sue review edition</div>
+      <h1>Fall Together</h1>
+      <p class="hero-sub">
+        A five-week RV trip built around memorable time together — with
+        <b>18 workdays where Patrick works and Sue gets a genuinely fun day</b>,
+        not 18 days of waiting for work to end.
+      </p>
+      <div class="chips">
+        <span class="chip">Oct 2 → Nov 7</span
+        ><span class="chip">36 nights</span><span class="chip">7 bases</span
+        ><span class="chip">18 Sue workdays</span
+        ><span class="chip">8 planned days off + 2 reserve</span>
+      </div>
+    </header>
+    <nav>
+      <div class="nav-inner">
+        <button class="on" data-p="overview">Overview</button
+        ><button data-p="itinerary">Daily itinerary</button
+        ><button data-p="stops">Stops + activities</button
+        ><button data-p="work">Work + days off</button
+        ><button data-p="budget">Trip costs</button
+        ><button data-p="roads">RV grades</button
+        ><button data-p="review">Reviews</button>
+      </div>
+    </nav>
+    <main>
+      <section id="overview" class="panel on">
+        <h2>The goal</h2>
+        <div class="goal-grid">
+          <div class="goal">
+            <b>Shared time matters most</b>
+            <p>
+              Weekends, vacation days and evenings are built around hikes,
+              e-bike rides, museums, live music, good towns and time together.
+            </p>
+          </div>
+          <div class="goal">
+            <b>Sue gets real days of her own</b>
+            <p>
+              On 18 ordinary workdays, Sue gets a proposed outing with the car:
+              walkable towns, museums, spas, cafés, tours, talks and small
+              venues.
+            </p>
+          </div>
+          <div class="goal">
+            <b>Low-stress moves</b>
+            <p>
+              Most coach moves stay under 3½ hours; the longer Appalachian legs
+              get daylight and no work deadline.
+            </p>
+          </div>
+        </div>
+        <h2>Recommended route</h2>
+        <div class="route">
+          <p><b>Oct 2–6</b> Yellow Springs · ≈3 hr</p>
+          <p><b>Oct 6–11</b> Hocking Hills · ≈1¾ hr</p>
+          <p><b>Oct 11–15</b> New River Gorge · ≈3½ hr</p>
+          <p><b>Oct 15–22</b> Asheville · ≈4¼ hr</p>
+          <p><b>Oct 22–28</b> Chattanooga · ≈3½ hr</p>
+          <p><b>Oct 28–Nov 2</b> Lexington · ≈4¼ hr</p>
+          <p><b>Nov 2–7</b> Cincinnati/Lebanon · ≈1½ hr, then ≈3½ hr home</p>
+        </div>
+        <p class="note">
+          <b>Review it interactively:</b> every activity can be rated Love /
+          Maybe / Skip. You can also reclassify shared ideas as Sue-workday
+          options, or promote Sue-workday ideas to shared activities. Choices
+          persist on this device across refreshes and future visits.
+        </p>
+        <a
+          class="link"
+          target="_blank"
+          href="https://www.google.com/maps/dir/Canton,+MI/Yellow+Springs,+OH/Hocking+Hills+State+Park,+OH/Fayetteville,+WV/Asheville,+NC/Chattanooga,+TN/Lexington,+KY/Lebanon,+OH/Canton,+MI/"
+          >Full route in Google Maps ↗</a
+        >
+      </section>
+      <section id="itinerary" class="panel">
+        <div class="itinerary-head">
+          <div>
+            <p class="eyebrow">Oct 2 → Nov 7 · 36 nights · 7 bases</p>
+            <h2>Days on the road</h2>
+          </div>
+          <p class="muted">
+            A flexible trip path, with driving days, shared highlights, and
+            Sue’s workday plans easy to spot.
+          </p>
+        </div>
+        <div
+          id="itinerary-list"
+          class="itinerary"
+          aria-label="Daily itinerary"
+        ></div>
+      </section>
+      <section id="stops" class="panel">
+        <h2>Stops & activities</h2>
+        <p class="muted">
+          Tap any activity for photos, details, maps and your review controls.
+          Role changes are planning votes, not destructive edits — you can
+          change them anytime.
+        </p>
+        <div id="stop-grid" class="grid"></div>
+      </section>
+      <section id="work" class="panel">
+        <h2>Vacation-day budget</h2>
+        <p>
+          Eight days are tentatively allocated, leaving two reserve days now
+          that a 5+ week trip can justify a 10-day ceiling.
+        </p>
+        <div class="days">
+          <div><b>1 · Oct 9</b><br />Hocking big hike</div>
+          <div><b>2 · Oct 12</b><br />New River</div>
+          <div><b>3 · Oct 16</b><br />Asheville mountain day</div>
+          <div><b>4 · Oct 19</b><br />Asheville full day</div>
+          <div><b>5 · Oct 23</b><br />Chattanooga</div>
+          <div><b>6 · Oct 26</b><br />Chattanooga</div>
+          <div><b>7 · Oct 30</b><br />Lexington</div>
+          <div><b>8 · Nov 6</b><br />Cincinnati</div>
+          <div class="reserve"><b>9 · Reserve</b><br />Weather/event</div>
+          <div class="reserve"><b>10 · Reserve</b><br />Move/favorite stop</div>
+        </div>
+        <p class="note">
+          <b>Normal workday:</b> 7–10 work · 10–11 breakfast/handoff · 11–4
+          protected core · after 4 shared activity. That yields 18 ordinary
+          workdays where Sue gets a planned solo option.
+        </p>
+      </section>
+      <section id="budget" class="panel">
+        <p class="eyebrow">Rough trip tracker · not a gatekeeper</p>
+        <h2>Keep an eye on costs, then choose the worthwhile thing</h2>
+        <p class="muted">
+          These are planning ranges for the whole loop. They make spending
+          visible, but they are not a reason to skip a memorable stop, event, or
+          day together.
+        </p>
+        <div class="cost-grid" aria-label="Rough trip cost ranges">
+          <article>
+            <span>Campgrounds</span><b>$1,700–2,350</b
+            ><small
+              >36 nights · mix of public parks and full-hookup stays</small
+            >
+          </article>
+          <article>
+            <span>Fuel</span><b>$900–1,400</b
+            ><small
+              >≈2,100 miles · coach mileage and pump prices will move this
+              most</small
+            >
+          </article>
+          <article>
+            <span>Food + treats</span><b>$1,800–2,700</b
+            ><small
+              >Groceries, dinners out, coffee, and a few good splurges</small
+            >
+          </article>
+          <article>
+            <span>Activities</span><b>$900–1,700</b
+            ><small>Tickets, museums, bikes, tours, spa, and live music</small>
+          </article>
+        </div>
+        <div class="cost-total">
+          <span>Comfortable rough range</span><b>$5,300–8,150</b
+          ><small>plus any optional big-ticket add-ons</small>
+        </div>
+        <p class="note">
+          <b>Simple rule:</b> if a place or event feels genuinely worthwhile, do
+          it. Use this as a running awareness tool—not a scorecard for saying
+          no.
+        </p>
+      </section>
+      <section id="roads" class="panel">
+        <h2>RV grades & stress</h2>
+        <p>
+          <b style="color: #2e6448">Easy:</b> Canton → Yellow Springs; Lexington
+          → Lebanon → home.
+        </p>
+        <p>
+          <b style="color: #705415">Moderate:</b> Yellow Springs → Hocking;
+          Hocking → Fayetteville; Asheville → Chattanooga; Chattanooga →
+          Lexington.
+        </p>
+        <p>
+          <b style="color: #7d3b22">Most serious:</b> Fayetteville → Asheville.
+          Keep the coach on major routes, travel in daylight and don't make it a
+          work-morning deadline.
+        </p>
+        <p class="note">
+          <b>Blue Ridge Parkway:</b> use the Escape for sightseeing. Check live
+          NPS road closures the night before.
+        </p>
+        <a
+          class="link"
+          target="_blank"
+          href="https://www.nps.gov/blri/planyourvisit/roadclosures.htm"
+          >Blue Ridge closures ↗</a
+        >
+      </section>
+      <section id="review" class="panel">
+        <h2>Trip reviews</h2>
+        <div id="activity-summary" class="route">No activity ratings yet.</div>
+        <h3>Stop-level votes</h3>
+        <div id="summary" class="route">
+          No stop votes yet. Open Stops + activities and vote on each base.
+        </div>
+        <p>
+          <button id="clearActivities">Clear activity reviews</button>
+          <button id="clear">Clear stop votes</button>
+        </p>
+        <p class="muted">
+          Reviews are saved in this browser's local storage so they survive
+          refreshes and future visits on this device.
+        </p>
+      </section>
+    </main>
+    <div
+      id="modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="mt"
+    >
+      <div class="box">
+        <img id="mi" alt="" />
+        <div class="body">
+          <div class="top">
+            <div>
+              <div id="mw" class="muted"></div>
+              <h2 id="mt"></h2>
+            </div>
+            <button class="close" id="mc" aria-label="Close">×</button>
+          </div>
+          <div id="mf" class="facts"></div>
+          <p id="md"></p>
+          <div class="reviewbox">
+            <b>Your activity rating</b>
+            <div id="ratingControls" class="rating-controls">
+              <button data-rating="Love">😍 Love</button
+              ><button data-rating="Maybe">🙂 Maybe</button
+              ><button data-rating="Skip">✂ Skip</button>
+            </div>
+            <div id="roleControls" class="role-controls"></div>
+            <p id="savedMsg" class="saved-msg" aria-live="polite"></p>
+          </div>
+          <div class="actions">
+            <a id="mu" target="_blank" rel="noopener">Official / details ↗</a
+            ><a id="mm" target="_blank" rel="noopener">Google Maps ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.RV_STOPS = [];
+    </script>
+    <script src="data-yellow.js"></script>
+    <script src="data-hocking.js"></script>
+    <script src="data-newriver.js"></script>
+    <script src="data-asheville.js"></script>
+    <script src="data-chattanooga.js"></script>
+    <script src="data-lexington.js"></script>
+    <script src="data-cincinnati.js"></script>
+    <script src="itinerary.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

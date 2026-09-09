@@ -1,1 +1,65 @@
-window.RV_STOPS=(window.RV_STOPS||[]).concat([{id:'newriver',name:'New River Gorge',dates:'Oct 11–15',image:'https://i0.wp.com/klaratheexplorer.com/wp-content/uploads/2023/03/img_1060-1.jpeg?fit=1200%2C800&ssl=1',campground:{name:'Rifrafters Campground',url:'https://rifrafters.com/',map:'https://www.google.com/maps/search/?api=1&query=Rifrafters+Campground+Fayetteville+WV',note:'Full hookups/50A; try for the paved pull-through intended for larger rigs.'},activities:[{who:'Together',name:'Endless Wall Trail',facts:'2.4 mi one-way · moderate · exposed viewpoints',desc:'Forest rim trail with major gorge views. No scrambling is required, but some viewpoints are at cliff edges; stay back from the edge.',url:'https://home.nps.gov/places/endless-wall-trail.htm'},{who:'Together',name:'Long Point',facts:'Moderate · classic bridge view',desc:'A manageable forest hike ending at the classic broadside view of the New River Gorge Bridge.',url:'https://www.nps.gov/neri/planyourvisit/fayetteville-area-hiking-trails.htm'},{who:'Together',name:'Grandview',facts:'Flexible mileage · easy–moderate',desc:'A lower-pressure fallback with multiple rim/woodland options and broad river views.',url:'https://www.nps.gov/neri/planyourvisit/grandview-area-hiking-trails.htm'},{who:'Together / Sue solo',name:'Bridge Walk',facts:'Guided · harnessed · 2–3 hr',desc:'A guided walk on the inspection catwalk beneath the bridge. Very distinctive, but definitely a heights activity.',url:'https://bridgewalk.com/'},{who:'Sue daytime',name:'Fayetteville cafés & shops',facts:'Compact downtown · 2–3 hr',desc:'Pleasant small town, but not a full day by itself—best paired with Canyon Rim or Bridge Walk.',url:'https://fayettevillewv.org/'},{who:'Sue daytime',name:'Tamarack Marketplace',facts:'Art/craft · food · indoor',desc:'A large West Virginia marketplace focused on regional art, craft and food. Good weather-proof solo option.',url:'https://www.tamarackwv.com/'},{who:'Sue daytime',name:'African American Heritage Auto Tour',facts:'Self-guided · history · car-based',desc:'NPS driving experience interpreting African American life in the gorge region—a much better history fit than battlefield tourism.',url:'https://www.nps.gov/neri/learn/historyculture/african-american-heritage-auto-tour.htm'}]}]);
+window.RV_STOPS = (window.RV_STOPS || []).concat([
+  {
+    id: "newriver",
+    name: "New River Gorge",
+    dates: "Oct 11–15",
+    image: "images/new-river-gorge.jpeg",
+    campground: {
+      name: "Rifrafters Campground",
+      url: "https://rifrafters.com/",
+      map: "https://www.google.com/maps/search/?api=1&query=Rifrafters+Campground+Fayetteville+WV",
+      note: "Full hookups/50A; try for the paved pull-through intended for larger rigs.",
+    },
+    activities: [
+      {
+        who: "Together",
+        name: "Endless Wall Trail",
+        facts: "2.4 mi one-way · moderate · exposed viewpoints",
+        desc: "Forest rim trail with major gorge views. No scrambling is required, but some viewpoints are at cliff edges; stay back from the edge.",
+        url: "https://home.nps.gov/places/endless-wall-trail.htm",
+      },
+      {
+        who: "Together",
+        name: "Long Point",
+        facts: "Moderate · classic bridge view",
+        desc: "A manageable forest hike ending at the classic broadside view of the New River Gorge Bridge.",
+        url: "https://www.nps.gov/neri/planyourvisit/fayetteville-area-hiking-trails.htm",
+      },
+      {
+        who: "Together",
+        name: "Grandview",
+        facts: "Flexible mileage · easy–moderate",
+        desc: "A lower-pressure fallback with multiple rim/woodland options and broad river views.",
+        url: "https://www.nps.gov/neri/planyourvisit/grandview-area-hiking-trails.htm",
+      },
+      {
+        who: "Together / Sue solo",
+        name: "Bridge Walk",
+        facts: "Guided · harnessed · 2–3 hr",
+        desc: "A guided walk on the inspection catwalk beneath the bridge. Very distinctive, but definitely a heights activity.",
+        url: "https://bridgewalk.com/",
+      },
+      {
+        who: "Sue daytime",
+        name: "Fayetteville cafés & shops",
+        facts: "Compact downtown · 2–3 hr",
+        desc: "Pleasant small town, but not a full day by itself—best paired with Canyon Rim or Bridge Walk.",
+        url: "https://fayettevillewv.org/",
+      },
+      {
+        who: "Sue daytime",
+        name: "Tamarack Marketplace",
+        facts: "Art/craft · food · indoor",
+        desc: "A large West Virginia marketplace focused on regional art, craft and food. Good weather-proof solo option.",
+        url: "https://www.tamarackwv.com/",
+      },
+      {
+        who: "Sue daytime",
+        name: "African American Heritage Auto Tour",
+        facts: "Self-guided · history · car-based",
+        desc: "NPS driving experience interpreting African American life in the gorge region—a much better history fit than battlefield tourism.",
+        url: "https://www.nps.gov/neri/learn/historyculture/african-american-heritage-auto-tour.htm",
+      },
+    ],
+  },
+]);

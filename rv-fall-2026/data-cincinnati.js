@@ -1,1 +1,65 @@
-window.RV_STOPS=(window.RV_STOPS||[]).concat([{id:'cincinnati',name:'Cincinnati / Lebanon',dates:'Nov 2–7',image:'https://images.squarespace-cdn.com/content/v1/5f4d8a25db85a54c4d64fe76/1346a894-46f8-409d-a44c-c756d7c4e39d/freedomcenter_001_15272166401_o.jpg',campground:{name:'Lebanon / Cincinnati NE KOA Holiday',url:'https://koa.com/campgrounds/cincinnati/',map:'https://www.google.com/maps/search/?api=1&query=Lebanon+Cincinnati+NE+KOA+Holiday',note:'Year-round KOA with 50A service and easy access to Lebanon, the Little Miami trail corridor and Cincinnati.'},activities:[{who:'Together',name:'Little Miami Scenic Trail',facts:'Paved · flat/gentle · e-bike ideal',desc:'An excellent final e-bike day with lots of distance flexibility and town stops along the route.',url:'https://www.traillink.com/trail/little-miami-scenic-trail/'},{who:'Together / Sue solo',name:'National Underground Railroad Freedom Center',facts:'Civil-rights history · 3–4 hr',desc:'The best historical fit on the route: slavery, freedom, resistance and continuing human-rights themes rather than battlefield history.',url:'https://freedomcenter.org/'},{who:'Together / Sue solo',name:'Museum Center or Cincinnati Zoo',facts:'Weather-flexible · half/full day',desc:'Two strong big-city choices. Let weather and energy decide which one earns the day.',url:'https://www.cincymuseum.org/'},{who:'Evening',name:'Comedy / music / theatre',facts:'Calendar-driven',desc:'Use Go Bananas, Aronoff, Taft or Memorial Hall to make the final work week feel like part of the vacation, not just the drive home.',url:'https://gobananascomedy.com/'},{who:'Sue daytime',name:'Historic Lebanon',facts:'Small town · cafés · close to camp',desc:'An easy close-to-camp day of wandering, coffee and shops when Sue does not want to drive into Cincinnati.',url:'https://www.lebanonohio.gov/'},{who:'Sue daytime',name:'Findlay Market',facts:'Food hall · shops · urban wandering',desc:'A lively public market surrounded by Over-the-Rhine; easy to build a flexible half day around.',url:'https://www.findlaymarket.org/'},{who:'Sue daytime',name:'Contemporary Arts Center',facts:'Downtown art · 1–3 hr',desc:'A compact downtown art stop that pairs naturally with lunch, coffee and other city wandering.',url:'https://www.contemporaryartscenter.org/'}]}]);
+window.RV_STOPS = (window.RV_STOPS || []).concat([
+  {
+    id: "cincinnati",
+    name: "Cincinnati / Lebanon",
+    dates: "Nov 2–7",
+    image: "images/cincinnati.jpg",
+    campground: {
+      name: "Lebanon / Cincinnati NE KOA Holiday",
+      url: "https://koa.com/campgrounds/cincinnati/",
+      map: "https://www.google.com/maps/search/?api=1&query=Lebanon+Cincinnati+NE+KOA+Holiday",
+      note: "Year-round KOA with 50A service and easy access to Lebanon, the Little Miami trail corridor and Cincinnati.",
+    },
+    activities: [
+      {
+        who: "Together",
+        name: "Little Miami Scenic Trail",
+        facts: "Paved · flat/gentle · e-bike ideal",
+        desc: "An excellent final e-bike day with lots of distance flexibility and town stops along the route.",
+        url: "https://www.traillink.com/trail/little-miami-scenic-trail/",
+      },
+      {
+        who: "Together / Sue solo",
+        name: "National Underground Railroad Freedom Center",
+        facts: "Civil-rights history · 3–4 hr",
+        desc: "The best historical fit on the route: slavery, freedom, resistance and continuing human-rights themes rather than battlefield history.",
+        url: "https://freedomcenter.org/",
+      },
+      {
+        who: "Together / Sue solo",
+        name: "Museum Center or Cincinnati Zoo",
+        facts: "Weather-flexible · half/full day",
+        desc: "Two strong big-city choices. Let weather and energy decide which one earns the day.",
+        url: "https://www.cincymuseum.org/",
+      },
+      {
+        who: "Evening",
+        name: "Comedy / music / theatre",
+        facts: "Calendar-driven",
+        desc: "Use Go Bananas, Aronoff, Taft or Memorial Hall to make the final work week feel like part of the vacation, not just the drive home.",
+        url: "https://gobananascomedy.com/",
+      },
+      {
+        who: "Sue daytime",
+        name: "Historic Lebanon",
+        facts: "Small town · cafés · close to camp",
+        desc: "An easy close-to-camp day of wandering, coffee and shops when Sue does not want to drive into Cincinnati.",
+        url: "https://www.lebanonohio.gov/",
+      },
+      {
+        who: "Sue daytime",
+        name: "Findlay Market",
+        facts: "Food hall · shops · urban wandering",
+        desc: "A lively public market surrounded by Over-the-Rhine; easy to build a flexible half day around.",
+        url: "https://www.findlaymarket.org/",
+      },
+      {
+        who: "Sue daytime",
+        name: "Contemporary Arts Center",
+        facts: "Downtown art · 1–3 hr",
+        desc: "A compact downtown art stop that pairs naturally with lunch, coffee and other city wandering.",
+        url: "https://www.contemporaryartscenter.org/",
+      },
+    ],
+  },
+]);
